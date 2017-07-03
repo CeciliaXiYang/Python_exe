@@ -29,8 +29,15 @@ Some frequently used commands
    
    b) c = sorted(set(a) - set(b))
 
-5) 
-
+5) About SET:
+   
+   a) Get unique elements in a list a: set(a)
+   
+   b) Remove a list b from list a: list(set(a) - set(b))
+   
+   c) Intersection of two sets a and b: set(a) & set(b)
+   
+   d) Union of two sets a and b: set(a) | set(b)
 
 ### Array
 
