@@ -116,7 +116,7 @@
    
    ```{.isa}
    df.loc[:, ['A']]
-      df.loc[:, [N]]
+   df.loc[:, [N]]
    ```
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
@@ -136,6 +136,11 @@
    ```{.isa}
    df[df['A'].isnull()].index
    sum(df['A'].isnull) (Number of null elements in a column)
+   ```
+9) Row index of a dataframe for NaN in a column 'A':
+
+   ```{.isa}
+   np.where(pd.isnull(df['A']))[0]
    ```
 
 ### Keras package for neual network
