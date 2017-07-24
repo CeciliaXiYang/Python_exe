@@ -87,7 +87,6 @@ Some frequently used commands
    b) random.sample(a, k)
 
    c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)
-   
    ```
    
 ### Array
