@@ -11,33 +11,41 @@ Some frequently used commands
 
 2) Find a certain element x in list a:
 
-   `a) a.index(x) -- Only return the first element`
+   ```
+   a) a.index(x) -- Only return the first element
 
-   `b) [i for i, j in enumerate(a) if j == x]`
+   b) [i for i, j in enumerate(a) if j == x]
+   ```
 
 3) Delete an element x from list a:
 
-   `a) a.remove(x)  -- Only delete the first element`
+   ```
+   a) a.remove(x)  -- Only delete the first element
 
-   `b) del a[x]`
+   b) del a[x]
 
-   `c) a.pop(x) -- Could return the value being popped`
+   c) a.pop(x) -- Could return the value being popped
+   ```
    
 4) Delete a list of elements b from another list a:
 
-   `a) [x for x in b if x not in a]`
+   ```
+   a) [x for x in b if x not in a]
 
-   `b) c = sorted(set(a) - set(b))`
+   b) c = sorted(set(a) - set(b))
+   ```
 
 5) About SET:
    
-   `a) Get unique elements in a list a: set(a)`
+   ```
+   a) Get unique elements in a list a: set(a)
     
-   `b) Remove a list b from list a: list(set(a) - set(b))`
+   b) Remove a list b from list a: list(set(a) - set(b))
 
-   `c) Intersection of two sets a and b: set(a) & set(b)`
+   c) Intersection of two sets a and b: set(a) & set(b)
 
-   `d) Union of two sets a and b: set(a) | set(b)`
+   d) Union of two sets a and b: set(a) | set(b)
+   ```
    
 6) Iteratively generate a dictionary:
 
@@ -45,11 +53,13 @@ Some frequently used commands
    
 7) Sort a list a:
 
-   `a) a.sort()`
+   ```
+   a) a.sort()
    
-   `b) a.sort(reverse=True) (with decresing order)`
+   b) a.sort(reverse=True) (with decresing order)
     
-   `c) sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)`
+   c) sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)
+   ```
    
 8) Divide a number for each element in list a:
 
@@ -119,13 +129,13 @@ Some frequently used commands
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
    
-  ```{.isa}
+   ```
    df.reset_index(drop=True)
    ```
    
 7) Sort a dataframe by a set of columns:
 
-   ```{.isa}
+   ```
    df.sort_values(by=[N])
    ```
    
