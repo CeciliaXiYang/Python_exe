@@ -15,7 +15,6 @@
 
    ```{.isa}
    a) a.index(x) -- Only return the first element
-
    b) [i for i, j in enumerate(a) if j == x]
    ```
 
@@ -23,9 +22,7 @@
 
    ```{.isa}
    a) a.remove(x)  -- Only delete the first element
-
    b) del a[x]
-
    c) a.pop(x) -- Could return the value being popped
    ```
    
@@ -33,19 +30,15 @@
 
    ```{.isa}
    a) [x for x in b if x not in a]
-
    b) c = sorted(set(a) - set(b))
    ```
 
 5) About SET:
    
    ```{.isa}
-   a) Get unique elements in a list a: set(a)
-    
+   a) Get unique elements in a list a: set(a) 
    b) Remove a list b from list a: list(set(a) - set(b))
-
    c) Intersection of two sets a and b: set(a) & set(b)
-
    d) Union of two sets a and b: set(a) | set(b)
    ```
    
@@ -59,9 +52,7 @@
 
    ```{.isa}
    a) a.sort()
-   
-   b) a.sort(reverse=True) (with decresing order)
-    
+   b) a.sort(reverse=True) (with decresing order) 
    c) sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)
    ```
    
@@ -75,7 +66,6 @@
 
    ```{.isa}
    [x1 - x2 for (x1, x2) in zip(a,b)]
-   
    list(np.array(a) - np.array(b))
    ```
    
@@ -83,9 +73,7 @@
 
    ```{.isa}
    a) random.shuffle(a); a[:k]
-
    b) random.sample(a, k)
-
    c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)
    ```
    
@@ -99,11 +87,8 @@
 
    ```{.isa}
    comb_df = []
-   
    for i in range(n):
-   
-      comb_df.append(sub_df[n])
-      
+      comb_df.append(sub_df[n]) 
    comb_df = pd.concat(comb_df, axis=1)
    ```
 
@@ -111,7 +96,6 @@
 
    ```{.isa}
    df.apply(lamba x: x.argmax(), axis=1)
-   
    (df.apply: Apply function along input axis of dataframe)
    ```
    
@@ -125,7 +109,6 @@
 
    ```{.isa}
    df[df['A'] == n]
-   
    df[df['A'].isin([N])]
    ```
 
@@ -133,8 +116,7 @@
    
    ```{.isa}
    df.loc[:, ['A']]
-   
-   df.loc[:, [N]]
+      df.loc[:, [N]]
    ```
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
@@ -153,9 +135,7 @@
 
    ```{.isa}
    df[df['A'].isnull()].index
-   
-   sum(df['A'].isnull) 
-   (Number of null elements in a column)
+   sum(df['A'].isnull) (Number of null elements in a column)
    ```
 
 ### Keras package for neual network
