@@ -6,7 +6,7 @@ Some frequently used commands
 
 ### List
 1) Convert a binary feature in dataframe to one-hot:
-
+   
    a = df.loc[:,'feature'].values.tolist()
    
    pd.get_dummies(a)
