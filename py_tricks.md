@@ -7,39 +7,39 @@ Some frequently used commands
 ### List
 1) Convert a binary feature in dataframe to one-hot:
    
-  `a = df.loc[:,'feature'].values.tolist()
+   `a = df.loc[:,'feature'].values.tolist()`
    
-   pd.get_dummies(a)`
+   `pd.get_dummies(a)`
 
 2) Find a certain element x in list a:
 
-  `a) a.index(x) -- Only return the first element
-   
-   b) [i for i, j in enumerate(a) if j == x]`
+   `a) a.index(x) -- Only return the first element`
+    
+   `b) [i for i, j in enumerate(a) if j == x]`
    
 3) Delete an element x from list a:
 
-  `a) a.remove(x)  -- Only delete the first element
+   `a) a.remove(x)  -- Only delete the first element`
    
-   b) del a[x]
+   `b) del a[x]`
    
-   c) a.pop(x) -- Could return the value being popped`
+   `c) a.pop(x) -- Could return the value being popped`
    
 4) Delete a list of elements b from another list a:
 
-   `a) [x for x in b if x not in a]
+    `a) [x for x in b if x not in a]`
    
-   b) c = sorted(set(a) - set(b))`
+    `b) c = sorted(set(a) - set(b))`
 
 5) About SET:
    
-   `a) Get unique elements in a list a: set(a)
+    `a) Get unique elements in a list a: set(a)`
    
-   b) Remove a list b from list a: list(set(a) - set(b))
+    `b) Remove a list b from list a: list(set(a) - set(b))`
    
-   c) Intersection of two sets a and b: set(a) & set(b)
+    `c) Intersection of two sets a and b: set(a) & set(b)`
    
-   d) Union of two sets a and b: set(a) | set(b)`
+    `d) Union of two sets a and b: set(a) | set(b)`
    
 6) Iteratively generate a dictionary:
 
@@ -47,11 +47,11 @@ Some frequently used commands
    
 7) Sort a list a:
 
-   `a.sort()
+    `a.sort()`
    
-   a.sort(reverse=True) (with decresing order)
-   
-   sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)`
+    `a.sort(reverse=True) (with decresing order)`
+    
+    `sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)`
    
 8) Divide a number for each element in list a:
 
@@ -59,23 +59,17 @@ Some frequently used commands
    
 9) Subtract two lists a and b:
 
-   `[x1 - x2 for (x1, x2) in zip(a,b)]
+   `[x1 - x2 for (x1, x2) in zip(a,b)]`
    
-   list(np.array(a) - np.array(b))`
+   `list(np.array(a) - np.array(b))`
    
 10) Randomly select k elements from a list a:
 
-   `a) random.shuffle(a)
+   `a) random.shuffle(a) a[:k]`
       
-      a[:k]
-      
-   b) random.sample(a, k)
+   `b) random.sample(a, k)`
    
-   c) If the randomly selected set need to be the same in each iteration:
-   
-      random.seed(l)
-      
-      random.sample(a, k)`
+   `c) If the randomly selected set need to be the same in each iteration: random.seed(l)  random.sample(a, k)`
    
 ### Array
 
