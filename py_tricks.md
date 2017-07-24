@@ -15,6 +15,7 @@ Some frequently used commands
    a) a.index(x) -- Only return the first element
 
    b) [i for i, j in enumerate(a) if j == x]
+   
    ```
 
 3) Delete an element x from list a:
@@ -25,6 +26,7 @@ Some frequently used commands
    b) del a[x]
 
    c) a.pop(x) -- Could return the value being popped
+   
    ```
    
 4) Delete a list of elements b from another list a:
@@ -45,6 +47,7 @@ Some frequently used commands
    c) Intersection of two sets a and b: set(a) & set(b)
 
    d) Union of two sets a and b: set(a) | set(b)
+   
    ```
    
 6) Iteratively generate a dictionary:
@@ -73,11 +76,14 @@ Some frequently used commands
    
 10) Randomly select k elements from a list a:
 
-   `a) random.shuffle(a); a[:k]`
+   ```
+   a) random.shuffle(a); a[:k]
 
-   `b) random.sample(a, k)`
+   b) random.sample(a, k)
 
-   `c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)`
+   c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)
+   
+   ```
    
 ### Array
 
@@ -128,8 +134,8 @@ Some frequently used commands
    ```
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
-   
-   ```
+
+   ```{.isa}
    df.reset_index(drop=True)
    ```
    
@@ -145,6 +151,7 @@ Some frequently used commands
    df[df['A'].isnull()].index
    
    sum(df['A'].isnull) (Number of null elements in a column)
+   
    ```
    
 ### Keras package for neual network
