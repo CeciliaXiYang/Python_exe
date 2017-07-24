@@ -7,7 +7,9 @@ Some frequently used commands
 ### List
 1) Convert a binary feature in dataframe to one-hot:
 
-   `a = df.loc[:,'feature'].values.tolist();  pd.get_dummies(a)`
+   ```{.isa}
+   a = df.loc[:,'feature'].values.tolist();  pd.get_dummies(a)
+   ```
 
 2) Find a certain element x in list a:
 
@@ -52,7 +54,9 @@ Some frequently used commands
    
 6) Iteratively generate a dictionary:
 
-   `{i: A[i] for i in range(len(A))}`
+   ```{.isa}
+   {i: A[i] for i in range(len(A))}
+   ```
    
 7) Sort a list a:
 
@@ -66,13 +70,17 @@ Some frequently used commands
    
 8) Divide a number for each element in list a:
 
-   `[x/N for x in a]`
+   ```{.isa}
+   [x/N for x in a]
+   ```
  
 9) Subtract two lists a and b:
 
-   `[x1 - x2 for (x1, x2) in zip(a,b)]`
+   ```
+   [x1 - x2 for (x1, x2) in zip(a,b)]
    
-   `list(np.array(a) - np.array(b))`
+   list(np.array(a) - np.array(b))
+   ```
    
 10) Randomly select k elements from a list a:
 
@@ -141,7 +149,7 @@ Some frequently used commands
    
 7) Sort a dataframe by a set of columns:
 
-   ```
+   ```{.isa}
    df.sort_values(by=[N])
    ```
    
