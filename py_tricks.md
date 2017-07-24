@@ -77,49 +77,65 @@ Some frequently used commands
 
 1) Append dataframes iteratively: 
 
-   ```comb_df = []
+   ```
+   comb_df = []
    
    for i in range(n):
    
       comb_df.append(sub_df[n])
       
-   comb_df = pd.concat(comb_df, axis=1)```
+   comb_df = pd.concat(comb_df, axis=1)
+   ```
 
 2) Determine the maximum value column in each row of dataframe:
 
-   ```df.apply(lamba x: x.argmax(), axis=1)
+   ```
+   df.apply(lamba x: x.argmax(), axis=1)
    
-   (df.apply: Apply function along input axis of dataframe)```
+   (df.apply: Apply function along input axis of dataframe)
+   ```
    
 3） Set columns of a dataframe:
 
-   ```df.columns = [list of column names]```
+   ```
+   df.columns = [list of column names]
+   ```
    
 4) Select dataframe rows by a value / a list of values:
 
-   ```df[df['A'] == n]
+   ```
+   df[df['A'] == n]
    
-   df[df['A'].isin([N])]```
+   df[df['A'].isin([N])]
+   ```
 
 5) Select dataframe columns by a list of names:
    
-   ```df.loc[:, ['A']]
+   ```
+   df.loc[:, ['A']]
    
-   df.loc[:, [N]]```
+   df.loc[:, [N]]
+   ```
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
    
-   ```df.reset_index(drop=True)```
+   ```
+   df.reset_index(drop=True)
+   ```
    
 7) Sort a dataframe by a set of columns:
 
-   ```df.sort_values(by=[N])```
+   ```
+   df.sort_values(by=[N])
+   ```
    
 8) Get the null indexes of a column in dataframe:
 
-   ```df[df['A'].isnull()].index
+   ```
+   df[df['A'].isnull()].index
    
-   sum(df['A'].isnull) (Number of null elements in a column)```
+   sum(df['A'].isnull) (Number of null elements in a column)
+   ```
    
 ### Keras package for neual network
 
@@ -128,8 +144,10 @@ Some frequently used commands
 
 1) Measure the running time:
 
-   ```import time
+   ```
+   import time
    start = time.time()
    (function running here...)
    end = time.time()
-   running_time = end - start```
+   running_time = end - start
+   ```
