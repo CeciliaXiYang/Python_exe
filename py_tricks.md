@@ -17,7 +17,7 @@ Some frequently used commands
    a) a.index(x) -- Only return the first element
 
    b) [i for i, j in enumerate(a) if j == x]
-   ```
+   ```
 
 3) Delete an element x from list a:
 
@@ -154,7 +154,6 @@ Some frequently used commands
 
    ```{.isa}
    df[df['A'].isnull()].index
-   
    sum(df['A'].isnull) (Number of null elements in a column)
    ```
    
