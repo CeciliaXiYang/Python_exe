@@ -153,5 +153,7 @@
 
    ```{.isa}
    df[df['A'].isnull()].index
-   sum(df['A'].isnull) (Number of null elements in a column)
-   ```
+   
+   sum(df['A'].isnull) 
+   (Number of null elements in a column)
+   ```
