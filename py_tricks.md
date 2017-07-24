@@ -156,3 +156,16 @@
    (function running here...)
    end = time.time()
    running_time = end - start
+   ```
+   
+2) Calculate e^x:
+
+   ```{.isa}
+   import math
+   math.exp(x)
+   ```
+3) Calculate n^a:
+
+   ```{.isa}
+   n**(a)
+   ```
