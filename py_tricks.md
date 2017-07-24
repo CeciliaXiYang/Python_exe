@@ -13,27 +13,25 @@ Some frequently used commands
 
 2) Find a certain element x in list a:
 
-   ```
+   ```{.isa}
    a) a.index(x) -- Only return the first element
 
    b) [i for i, j in enumerate(a) if j == x]
-   
    ```
 
 3) Delete an element x from list a:
 
-   ```
+   ```{.isa}
    a) a.remove(x)  -- Only delete the first element
 
    b) del a[x]
 
    c) a.pop(x) -- Could return the value being popped
-   
    ```
    
 4) Delete a list of elements b from another list a:
 
-   ```
+   ```{.isa}
    a) [x for x in b if x not in a]
 
    b) c = sorted(set(a) - set(b))
@@ -41,7 +39,7 @@ Some frequently used commands
 
 5) About SET:
    
-   ```
+   ```{.isa}
    a) Get unique elements in a list a: set(a)
     
    b) Remove a list b from list a: list(set(a) - set(b))
@@ -49,7 +47,6 @@ Some frequently used commands
    c) Intersection of two sets a and b: set(a) & set(b)
 
    d) Union of two sets a and b: set(a) | set(b)
-   
    ```
    
 6) Iteratively generate a dictionary:
@@ -60,7 +57,7 @@ Some frequently used commands
    
 7) Sort a list a:
 
-   ```
+   ```{.isa}
    a) a.sort()
    
    b) a.sort(reverse=True) (with decresing order)
@@ -76,7 +73,7 @@ Some frequently used commands
  
 9) Subtract two lists a and b:
 
-   ```
+   ```{.isa}
    [x1 - x2 for (x1, x2) in zip(a,b)]
    
    list(np.array(a) - np.array(b))
@@ -84,7 +81,7 @@ Some frequently used commands
    
 10) Randomly select k elements from a list a:
 
-   ```
+   ```{.isa}
    a) random.shuffle(a); a[:k]
 
    b) random.sample(a, k)
@@ -101,7 +98,7 @@ Some frequently used commands
 
 1) Append dataframes iteratively: 
 
-   ```
+   ```{.isa}
    comb_df = []
    
    for i in range(n):
@@ -113,7 +110,7 @@ Some frequently used commands
 
 2) Determine the maximum value column in each row of dataframe:
 
-   ```
+   ```{.isa}
    df.apply(lamba x: x.argmax(), axis=1)
    
    (df.apply: Apply function along input axis of dataframe)
@@ -127,7 +124,7 @@ Some frequently used commands
    
 4) Select dataframe rows by a value / a list of values:
 
-   ```
+   ```{.isa}
    df[df['A'] == n]
    
    df[df['A'].isin([N])]
@@ -135,7 +132,7 @@ Some frequently used commands
 
 5) Select dataframe columns by a list of names:
    
-   ```
+   ```{.isa}
    df.loc[:, ['A']]
    
    df.loc[:, [N]]
@@ -155,11 +152,10 @@ Some frequently used commands
    
 8) Get the null indexes of a column in dataframe:
 
-   ```
+   ```{.isa}
    df[df['A'].isnull()].index
    
    sum(df['A'].isnull) (Number of null elements in a column)
-   
    ```
    
 ### Keras package for neual network
@@ -169,7 +165,7 @@ Some frequently used commands
 
 1) Measure the running time:
 
-   ```
+   ```{.isa}
    import time
    start = time.time()
    (function running here...)
