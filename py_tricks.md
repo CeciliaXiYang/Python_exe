@@ -1,6 +1,6 @@
 ####################################
 
-Some frequently used commands
+## Some frequently used commands
 
 ####################################
 
@@ -154,19 +154,4 @@ Some frequently used commands
    ```{.isa}
    df[df['A'].isnull()].index
    sum(df['A'].isnull) (Number of null elements in a column)
-   ```
-   
-### Keras package for neual network
-
-
-### Some useful tricks
-
-1) Measure the running time:
-
-   ```{.isa}
-   import time
-   start = time.time()
-   (function running here...)
-   end = time.time()
-   running_time = end - start
    ```
