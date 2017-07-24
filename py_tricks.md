@@ -7,9 +7,7 @@ Some frequently used commands
 ### List
 1) Convert a binary feature in dataframe to one-hot:
    
-   `a = df.loc[:,'feature'].values.tolist()`
-   
-   `pd.get_dummies(a)`
+   `a = df.loc[:,'feature'].values.tolist();  pd.get_dummies(a)`
 
 2) Find a certain element x in list a:
 
@@ -27,19 +25,19 @@ Some frequently used commands
    
 4) Delete a list of elements b from another list a:
 
-    `a) [x for x in b if x not in a]`
+   `a) [x for x in b if x not in a]`
    
-    `b) c = sorted(set(a) - set(b))`
+   `b) c = sorted(set(a) - set(b))`
 
 5) About SET:
    
-    `a) Get unique elements in a list a: set(a)`
+   `a) Get unique elements in a list a: set(a)`
+    
+   `b) Remove a list b from list a: list(set(a) - set(b))`
+    
+   `c) Intersection of two sets a and b: set(a) & set(b)`
    
-    `b) Remove a list b from list a: list(set(a) - set(b))`
-   
-    `c) Intersection of two sets a and b: set(a) & set(b)`
-   
-    `d) Union of two sets a and b: set(a) | set(b)`
+   `d) Union of two sets a and b: set(a) | set(b)`
    
 6) Iteratively generate a dictionary:
 
@@ -47,11 +45,11 @@ Some frequently used commands
    
 7) Sort a list a:
 
-    `a.sort()`
+   `a) a.sort()`
    
-    `a.sort(reverse=True) (with decresing order)`
+   `b) a.sort(reverse=True) (with decresing order)`
     
-    `sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)`
+   `c) sorted(range(len(a)), key=lamba k:a[k]) (return the index of resorted data)`
    
 8) Divide a number for each element in list a:
 
@@ -65,11 +63,11 @@ Some frequently used commands
    
 10) Randomly select k elements from a list a:
 
-   `a) random.shuffle(a) a[:k]`
+   `a) random.shuffle(a); a[:k]`
       
    `b) random.sample(a, k)`
    
-   `c) If the randomly selected set need to be the same in each iteration: random.seed(l)  random.sample(a, k)`
+   `c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)`
    
 ### Array
 
