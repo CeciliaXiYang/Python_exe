@@ -156,7 +156,7 @@
    
    sum(df['A'].isnull) 
    (Number of null elements in a column)
-   ```
+   ```
 
 ### Keras package for neual network
 
