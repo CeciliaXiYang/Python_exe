@@ -97,7 +97,7 @@ Some frequently used commands
    
 3） Set columns of a dataframe:
 
-   ```
+   ```{.isa}
    df.columns = [list of column names]
    ```
    
@@ -119,13 +119,13 @@ Some frequently used commands
    
 6) Reset indexes in a dataframe (without keeping the previous indexes):
    
-   ```
+  ```{.isa}
    df.reset_index(drop=True)
    ```
    
 7) Sort a dataframe by a set of columns:
 
-   ```
+   ```{.isa}
    df.sort_values(by=[N])
    ```
    
