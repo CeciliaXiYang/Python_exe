@@ -76,7 +76,42 @@
    b) random.sample(a, k)
    c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)
    ```
+   
+11) Usage of **MAP**:
    
+   Applies funtion to all items in an input list, i.e. square each element in a list a:
+   
+   ```{.isa}
+   list(map(lamda x: x**2, a))
+   ```
+   Work with a input list of functions (Apply functions as inputs):
+   
+   ```{.isa}
+   def Multiply(x): return x*x
+   def Add(x): return x+x
+   funcs = [Multiply, Add]
+   for i in range(5):
+      val = list(map(lambda x: x(i), funcs))
+   ```
+   
+12) Usage of **Filter**：
+
+   Creat a sublist of elements meet with the condition, i.e.: 
+
+   ```{.isa}
+   list(filter(lambda x: x < 0, input_list))
+   ```
+   
+13) Usage of **Reduce**:
+
+   A rolling computation to sequential pairs of values in a list, i.e.:
+   
+   ```{.isa}
+   from functools import reduce
+   product = reduce((lambda x,y: x*y), [1,2,3,4])
+   Output: 24
+   ```
+
 ### Array
 
 1) Concatenate two arrays A and B:
@@ -104,7 +139,20 @@
    A = np.arange(a,b)
    ```
    
-4) 
+4) Find unique elements in an array A:
+
+   ```{.isa}
+   [unique_elements, idx, counts] = np.unique(A, return_index = True, return_counts = True)
+   ```
+
+5) Find unique rows in an array A (use `void` type to jion the whole row into a single item):
+
+   ```{.isa}
+   B = np.ascontiguousarray(A).view(np.dtype((np.void, A.dtype.itemsize * A.shape[1])))
+   [_, idx] = np.unique(B, return_index = True)
+   unique_A = A[idx]
+   ```
+   Note: `ascontiguousarray` return a contiguous array in memory, can be checked by operator `B.flags['C_CONTIGUOUS']`
 
 ### DataFrame
 
@@ -196,4 +244,14 @@
    ```
 4) np.array v.s np.asarray:
 
+   `array` will make a copy of the object, while `asarray` will not unless necessary. 
+   
+5) Tuple v.s. List:
+
+   a) Tuple is fixed size whereas list is dynamic. i.e. elements cannot be added, removed from tuple. The operator `in` can be utilzied to check if an element exits in tuple.
+   
+   b) Tuple can be utilized as dictionary keys. 
+   
+   c) Tuple utilized for hererogeneous collections, while list for homogeneous collections.
+   
    
