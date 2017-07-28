@@ -79,7 +79,32 @@
    
 ### Array
 
+1) Concatenate two arrays A and B:
+   
+   ```{.isa}
+   np.concatenate((A, B), axis = 0/1)
+   Note: axis = 0 -- concatenate all elements in A and B into a column of array
+         axis = 1 -- concatenate pairwise elements in A and B with the same size of A/B
+   ```
+   
+2) Index of an element a in array A:
+   
+   ```{.isa}
+   index = np.where(A == a)[0] 
+   ```
+   
+   np.where to select elements from two lists(If True, select elements from first list; else select from second list):
+   ```{.isa}
+   np.where([True, False],[True, True]], [[1,2],[3,4]], [[5,6],[7,8]]) --> array([[1,6],[3,4]])
+   ```
+   
+3) Generate an array A with elements from a to b:
 
+   ```{.isa}
+   A = np.arange(a,b)
+   ```
+   
+4) 
 
 ### DataFrame
 
@@ -169,3 +194,6 @@
    ```{.isa}
    n**(a)
    ```
+4) np.array v.s np.asarray:
+
+   
