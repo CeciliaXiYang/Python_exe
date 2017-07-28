@@ -194,7 +194,7 @@
    (df.apply: Apply function along input axis of dataframe)
    ```
    
-3） Set columns of a dataframe:
+3) Set columns of a dataframe:
 
    ```{.isa}
    df.columns = [list of column names]
