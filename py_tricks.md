@@ -69,7 +69,23 @@
    list(np.array(a) - np.array(b))
    ```
    
-10) Randomly select k elements from a list a:
+10) Usage of **zip**:
+
+   Return a tuple that aggregates elements from each of the iterables:
+   
+   ```{.isa}
+   zipped = zip(x,y)
+   zipped = list(zipped)
+   ```
+   Note: x and y can have different lengths, the generated tuple has the same length with the shorter list. 
+   
+   Unzip a zipped tuple:
+   
+   ```{.isa}
+   x1, y1 = zip(*zipped)
+   ```
+   
+11) Randomly select k elements from a list a:
 
    ```{.isa}
    a) random.shuffle(a); a[:k]
@@ -77,7 +93,7 @@
    c) If the randomly selected set need to be the same in each iteration: random.seed(l); random.sample(a, k)
    ```
    
-11) Usage of **MAP**:
+12) Usage of **MAP**:
    
    Applies funtion to all items in an input list, i.e. square each element in a list a:
    
@@ -94,7 +110,7 @@
       val = list(map(lambda x: x(i), funcs))
    ```
    
-12) Usage of **Filter**：
+13) Usage of **Filter**：
 
    Creat a sublist of elements meet with the condition, i.e.: 
 
@@ -102,7 +118,7 @@
    list(filter(lambda x: x < 0, input_list))
    ```
    
-13) Usage of **Reduce**:
+14) Usage of **Reduce**:
 
    A rolling computation to sequential pairs of values in a list, i.e.:
    
@@ -153,6 +169,12 @@
    unique_A = A[idx]
    ```
    Note: `ascontiguousarray` return a contiguous array in memory, can be checked by operator `B.flags['C_CONTIGUOUS']`
+   
+6) Cummulative sum of an array A:
+
+   a) Cummulative sum of all elements into a list: `np.cumsum(A)`
+   
+   b) Cummulative sum of elements by row/column, returned a matrix with the same size: `np.cumsum(A, axis = 0/1)`
 
 ### DataFrame
 
@@ -253,5 +275,11 @@
    b) Tuple can be utilized as dictionary keys. 
    
    c) Tuple utilized for hererogeneous collections, while list for homogeneous collections.
+   
+6) Shallow copy v.s Deep copy:
+
+   a) Shallow copy constructs a new compound object, and the inserts references into it to the objects found in the original;
+   
+   b) Deep copy also constructs a new compound object, and the inserts references to the copied objects in the new one.
    
    
