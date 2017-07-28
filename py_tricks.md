@@ -282,4 +282,8 @@
    
    b) Deep copy also constructs a new compound object, and the inserts references to the copied objects in the new one.
    
+7) list.append v.s list.extend:
+
+   a) `append`: A = [a]; A.append([b]) --> [a,[b]]
    
+   b) `extend`: A = [a]; A.extend([b]) --> [a,b]
