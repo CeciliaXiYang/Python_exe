@@ -70,8 +70,8 @@
    ```
    
 10) Usage of **zip**:
-
-   Return a tuple that aggregates elements from each of the iterables:
+   
+   Return a tuple that aggregates elements from each of the iterables:
    
    ```{.isa}
    zipped = zip(x,y)
@@ -176,8 +176,8 @@
    
    b) Cummulative sum of elements by row/column, returned a matrix with the same size: `np.cumsum(A, axis = 0/1)`
    
-7) Calcualte sums within an array A:
-
+7) Calcualte sums within an array A: 
+   
    a) Sum of all elements: `np.sum(A)`
    
    b) Sum up rows/columns: `np.sum(A, axis=0/1)`
