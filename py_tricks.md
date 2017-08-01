@@ -98,7 +98,7 @@
    Applies funtion to all items in an input list, i.e. square each element in a list a:
    
    ```{.isa}
-   list(map(lamda x: x**2, a))
+   list(map(lambda x: x**2, a))
    ```
    Work with a input list of functions (Apply functions as inputs):
    
@@ -175,6 +175,18 @@
    a) Cummulative sum of all elements into a list: `np.cumsum(A)`
    
    b) Cummulative sum of elements by row/column, returned a matrix with the same size: `np.cumsum(A, axis = 0/1)`
+   
+7) Calcualte sums within an array A:
+
+   a) Sum of all elements: `np.sum(A)`
+   
+   b) Sum up rows/columns: `np.sum(A, axis=0/1)`
+   
+8) Calcualte difference of adjacent elements along the given axis in an array A:
+
+   ```{.isa}
+   bp.diff(A)
+   ```
 
 ### DataFrame
 
@@ -287,3 +299,17 @@
    a) `append`: A = [a]; A.append([b]) --> [a,[b]]
    
    b) `extend`: A = [a]; A.extend([b]) --> [a,b]
+   
+8) Get all possible combination of the elements in a list A:
+
+   ```{.isa}
+   import itertools
+   itertools.combinations(A)
+   ```
+   
+   Get all possible combination of different lists in A (with one element selected from each list):
+   
+   ```{.isa}
+   import itertools
+   list(itertools.product(*A))
+   ```
