@@ -48,6 +48,14 @@
    {i: A[i] for i in range(len(A))}
    ```
    
+   Add an element to dictionary:
+   
+   ```{.isa}
+   A_dict['x'] = a
+   or
+   A_dict.update{'x': a}
+   ```
+   
 7) Sort a list a:
 
    ```{.isa}
