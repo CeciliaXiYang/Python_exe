@@ -51,9 +51,8 @@
    Add an element to dictionary:
    
    ```{.isa}
-   A_dict['x'] = a
-   or
-   A_dict.update{'x': a}
+   a) A_dict['x'] = a
+   b) A_dict.update{'x': a}
    ```
    
 7) Sort a list a:
