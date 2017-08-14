@@ -257,6 +257,12 @@
    np.where(pd.isnull(df['A']))[0]
    ```
 
+10) Generate a dataframe with all elements being 0:
+
+   ```{.isa}
+   pd.DataFrame(0, index=np.arange(n), columns=[columns_set])
+   ```
+
 ### Keras package for neual network
 
 
