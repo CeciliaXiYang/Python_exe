@@ -335,7 +335,8 @@
    ```
 10) K-fold cross validation: `from sklearn.cross_validation import KFold`
    
-   ```
+   
+   ```{.isa}
    kf = KFold(n_splits=10)
    for train, test in kf.split(dataset):
       trainFrame = dataset.iloc[train]
