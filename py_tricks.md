@@ -262,6 +262,12 @@
    ```{.isa}
    pd.DataFrame(0, index=np.arange(n), columns=[columns_set])
    ```
+   
+11) Rename columns in dataframe:
+
+   ```{.isa}
+   df.rename(index=str, columns = {"A": "a"; "B": "b"})
+   ```
 
 ### Keras package for neual network
 
