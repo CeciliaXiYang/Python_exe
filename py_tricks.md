@@ -268,6 +268,12 @@
    ```{.isa}
    df.rename(index=str, columns = {"A": "a"; "B": "b"})
    ```
+  
+12) Find out unique elements and their numbers in a column: 
+
+   ```{.isa}
+   selected_demg_df.groupby('column')['ID'].nunique()
+   ```
 
 ### Keras package for neual network
 
