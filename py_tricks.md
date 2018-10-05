@@ -353,3 +353,8 @@
       trainFrame = dataset.iloc[train]
       testFrame = dataset.iloc[test]
    ```
+11) Calcualte pairwaise euclidean distance: 
+```
+import scipy
+scipy.spatial.distance.cdist(df.iloc[:,1:], df.iloc[:,1:], metric='eculidean')
+```
